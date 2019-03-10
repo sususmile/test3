@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" version="3.1">
+  <display-name>04_Serlvet_emplist</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <servlet>
+  	<servlet-name>DepartmentListServlet</servlet-name>
+  	<servlet-class>com.okliu.list.servlet.DepartmentListServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>DepartmentListServlet</servlet-name>
+  	<url-pattern>/deptList.do</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>EmployeeListServlet</servlet-name>
+  	<servlet-class>com.okliu.list.servlet.EmployeeListServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>EmployeeListServlet</servlet-name>
+  	<url-pattern>/empList.do</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>EmployeeDeleteServlet</servlet-name>
+  	<servlet-class>com.okliu.list.servlet.EmployeeDeleteServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>EmployeeDeleteServlet</servlet-name>
+  	<url-pattern>/empDelete.do</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>EmployeeAddServlet</servlet-name>
+  	<servlet-class>com.okliu.list.servlet.EmployeeAddServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>EmployeeAddServlet</servlet-name>
+  	<url-pattern>/empAdd.do</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>DepartmentAddServlet</servlet-name>
+  	<servlet-class>com.okliu.list.servlet.DepartmentAddServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>DepartmentAddServlet</servlet-name>
+  	<url-pattern>/deptAdd.do</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>EmployeeEditPageServlet</servlet-name>
+  	<servlet-class>com.okliu.list.servlet.EmployeeEditPageServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>EmployeeEditPageServlet</servlet-name>
+  	<url-pattern>/empEditPage.do</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>EmployeeEditServlet</servlet-name>
+  	<servlet-class>com.okliu.list.servlet.EmployeeEditServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>EmployeeEditServlet</servlet-name>
+  	<url-pattern>/empEdit.do</url-pattern>
+  </servlet-mapping>
+  
+</web-app>

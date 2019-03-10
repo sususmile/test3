@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>员工管理系统</title>
+<script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+<style type="text/css">
+	input{width: 200px;}
+	select{height: 22px;width: 203px;}
+	input[type='submit']{width: 50px;margin-left: 235px;}
+	#sp{margin-left: 31px;}
+</style>
+<script type="text/javascript">
+	$(function(){
+		$.get("ajax/depts.do",
+			function(json) {
+				$(json).each(function(index,data){
+					$("select").append("<option value='"+data.deptId+"'>"+data.deptName+"</option>");
+				});
+			}
+		);
+	});
+</script>
+</head>
+<body>
+<h1 align="center">员工管理系统-添加</h1>
+<center>
+	<form action="empAdd.do" method="post">
+		<p>员工姓名：<input type="text" name="empName" /></p>
+		<p>
+			<span id="sp"></span>部门：
+			<select name="deptNo">
+			</select>
+		</p>
+		<p><input type="submit" value="添加"/></p>
+	</form>
+</center>
+</body>
+</html>
